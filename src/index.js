@@ -13,19 +13,19 @@ app.use(morgan('combined'));
 
 // Template engine
 app.engine('hbs', handlebars.engine({
-    extname: '.hbs'
+	extname: '.hbs'
 }));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
 
 app.get('/', (req, res) => {
-    res.render('home');
+	res.render('home');
 })
 
 app.get('/news', (req, res) => {
-    res.render('news');
+	res.render('news');
 })
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+	console.log(`Example app listening on port ${port}`)
 })
